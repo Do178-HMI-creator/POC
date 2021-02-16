@@ -1,12 +1,9 @@
-# CMakeList.txt : CMake project for CMakeProject, include source and define
-# project specific logic here.
-#
 cmake_minimum_required (VERSION 3.8)
 project(POC)
 
-add_executable (POC "opengl.cpp" "line.cpp" "line.h" "rectangle.cpp" "rectangle.h" "point.cpp" "point.h" "pch.cpp" "pch.h")
+add_executable (POC "opengl.cpp" "agtgpdot.cpp" "agtgpdot.h" "pch.cpp" "pch.h" "agtgpline.cpp" "agtgpline.h" "agtgprectangle.cpp" "agtgprectangle.h"  "agtgraphicprimitiveifc.h")
 
-# OpenGL
+# Include OpenGL
 find_package(OpenGL REQUIRED COMPONENTS OpenGL)
 find_package(GLUT REQUIRED)
 find_package(GLU REQUIRED)
