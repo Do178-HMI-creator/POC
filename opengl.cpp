@@ -26,6 +26,7 @@ void display() {
   point deneme_point(145, 188);
   rectangle deneme_rectangle(100, 150, 250, 150, 250, 344, 100, 344);
 
+  glClear(GL_COLOR_BUFFER_BIT);
   deneme_line.draw();
   deneme_point.draw();
   deneme_rectangle.draw();
