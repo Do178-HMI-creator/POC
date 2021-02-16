@@ -1,6 +1,0 @@
-﻿  pch.cpp
-  line.cpp
-  opengl.cpp
-c:\users\monster\desktop\opengl\opengl\opengl.cpp(20): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  Generating Code...
-LINK : fatal error LNK1104: cannot open file 'glut32.lib'
