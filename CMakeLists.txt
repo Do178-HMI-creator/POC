@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.8)
 project(POC)
 
-add_executable (POC "opengl.cpp" "agtgpdot.cpp" "agtgpdot.h" "pch.cpp" "pch.h" "agtgpline.cpp" "agtgpline.h" "agtgprectangle.cpp" "agtgprectangle.h"  "agtgraphicprimitiveifc.h" agtgpcircle.cpp agtgpcircle.h)
+add_executable (POC "opengl.cpp" "agtgpdot.cpp" "agtgpdot.h" "pch.cpp" "pch.h" "agtgpline.cpp" "agtgpline.h" "agtgprectangle.cpp" "agtgprectangle.h"  "agtgraphicprimitiveifc.h" "agtgpcircle.cpp" "agtgpcircle.h" "agtTypPoint.h" "agtTypPoint.cpp")
 
 # Include OpenGL
 find_package(OpenGL REQUIRED COMPONENTS OpenGL)
