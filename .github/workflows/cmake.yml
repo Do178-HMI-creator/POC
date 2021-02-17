@@ -17,7 +17,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: openrndr/setup-opengl@v1.1
-    - run: xvfb-run glxinfo
+    - run: |
+            xvfb-run glxinfo
+            sudo apt-get install libglfw3
+            sudo apt-get install xorg-dev
+            sudo apt-get install libglu1-mesa-dev
+            sudo apt-get install libglm-dev
+            sudo apt-get install freeglut3-dev
 
     - name: Create Build Environment
       # Some projects don't allow in-source building, so create a separate build directory
