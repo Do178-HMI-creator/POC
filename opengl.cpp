@@ -10,6 +10,7 @@
 #include "agtgpdot.h"
 #include "agtgpline.h"
 #include "agtgprectangle.h"
+#include "agtgpcircle.h"
 #include "pch.h"
 
 void myinit() {
@@ -22,11 +23,13 @@ void display() {
     agtGpDot my_agtGpDot(123, 234);
     agtGpLine my_agtGpLine(123, 234, 333, 234);
     agtGpRectangle my_agtGpRectangle(100, 150, 250, 150, 250, 344, 100, 344);
+    agtGpCircle my_agtGpCircle(175,225,125);
 
     glClear(GL_COLOR_BUFFER_BIT);
     my_agtGpDot.draw();
     my_agtGpLine.draw();
     my_agtGpRectangle.draw();
+    my_agtGpCircle.draw();
 }
 
 int main(int argc, char **argv) {
