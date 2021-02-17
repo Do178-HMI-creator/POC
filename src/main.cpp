@@ -5,6 +5,7 @@
 #include <iostream>
 #include <thread>
 
+#include "agtTypColor.h"
 #include "agtTypPoint.h"
 #include "agtgpcircle.h"
 #include "agtgpdot.h"
@@ -18,10 +19,19 @@ agtTypPoint point3(195, 245);
 agtTypPoint point4(195, 295);
 agtTypPoint point5(145, 295);
 
-agtGpDot my_agtGpDot(point1);
-agtGpLine my_agtGpLine(point1, point2);
-agtGpRectangle my_agtGpRectangle(point2, point3, point4, point5);
-agtGpCircle my_agtGpCircle(point5, 125);
+agtTypColor color1(0.0, 0.0, 0.0);//black
+agtTypColor color2(1.0, 0.0, 0.0);//red
+agtTypColor color3(0.0, 1.0, 0.0);//green
+agtTypColor color4(0.0, 0.0, 1.0);//blue
+agtTypColor color5(1.0, 1.0, 0.0);//yellow
+agtTypColor color6(1.0, 0.0, 1.0);//pink
+agtTypColor color7(0.0, 1.0, 1.0);//cyan
+agtTypColor color8(1.0, 1.0, 1.0);//white
+
+agtGpDot my_agtGpDot(point1,color2);
+agtGpLine my_agtGpLine(point1, point2, color5);
+agtGpRectangle my_agtGpRectangle(point2,point3,point4,point5, color7);
+agtGpCircle my_agtGpCircle(point3, color4, 75);
 
 void myinit() {
     glMatrixMode(GL_PROJECTION);

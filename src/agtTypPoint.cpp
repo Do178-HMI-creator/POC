@@ -7,6 +7,16 @@ agtTypPoint::agtTypPoint(float x_c, float y_c)
 	this->y = y_c;
 }
 
+float agtTypPoint::get_x()
+{
+	return this->x;
+}
+
+float agtTypPoint::get_y()
+{
+	return this->y;
+}
+
 agtTypPoint agtTypPoint::operator+=(agtTypPoint pnt)
 {
 	(*this).x += pnt.x; 
