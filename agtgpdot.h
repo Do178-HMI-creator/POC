@@ -1,16 +1,16 @@
 #ifndef AGTGPDOT_H
 #define AGTGPDOT_H
 #include "agtgraphicprimitiveifc.h"
+#include"agtTypPoint.h"
 
 class agtGpDot : public agtGraphicPrimitiveIfc {
   public:
-    agtGpDot(int get_x, int get_y);
-    void update(int get_x, int get_y);
+    agtGpDot(agtTypPoint get_point);
+    void update(agtTypPoint get_point);
     void draw();
 
   private:
-    int x;
-    int y;
+	  agtTypPoint point;
 };
 
 #endif // AGTGPDOT_H

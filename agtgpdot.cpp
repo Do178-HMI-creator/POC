@@ -1,20 +1,18 @@
 #include "agtgpdot.h"
 #include <GL/glut.h>
 
-agtGpDot::agtGpDot(int get_x, int get_y) {
-    this->x = get_x;
-    this->y = get_y;
+agtGpDot::agtGpDot(agtTypPoint get_point) {
+	this->point = get_point;
 }
 
-void agtGpDot::update(int get_x, int get_y) {
-    this->x = get_x;
-    this->y = get_y;
+void agtGpDot::update(agtTypPoint get_point) {
+	this->point = get_point;
 }
 
 void agtGpDot::draw() {
     glColor3f(0.0, 1.0, 0.0);
     glBegin(GL_POINTS);
-    glVertex2f(x, y);
+    glVertex2f(this->point.x,this->point.y);
     glEnd();
     glFlush();
 }

@@ -1,44 +1,52 @@
-// opengl.cpp : This file contains the 'main' function. Program execution begins
-// and ends there.
-//
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
 
 #include <iostream>
 
+#include "agtTypPoint.h"
 #include "agtgpdot.h"
 #include "agtgpline.h"
 #include "agtgprectangle.h"
 #include "agtgpcircle.h"
 #include "pch.h"
 
-void myinit() {
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    gluOrtho2D(0.0, 499.0, 0.0, 499.0);
+void myinit() 
+{
+	glMatrixMode(GL_PROJECTION);	
+	glLoadIdentity();
+	gluOrtho2D(0.0, 499.0, 0.0, 499.0);
 }
 
-void display() {
-    agtGpDot my_agtGpDot(123, 234);
-    agtGpLine my_agtGpLine(123, 234, 333, 234);
-    agtGpRectangle my_agtGpRectangle(100, 150, 250, 150, 250, 344, 100, 344);
-    agtGpCircle my_agtGpCircle(175,225,125);
+void display() 
+{
+	agtTypPoint point1(23, 245);
+	agtTypPoint point2(145, 245);
+	agtTypPoint point3(195, 245);
+	agtTypPoint point4(195, 295);
+	agtTypPoint point5(145, 295);
 
-    glClear(GL_COLOR_BUFFER_BIT);
-    my_agtGpDot.draw();
-    my_agtGpLine.draw();
-    my_agtGpRectangle.draw();
-    my_agtGpCircle.draw();
+	agtGpDot my_agtGpDot(point1);
+	agtGpLine my_agtGpLine(point1, point2);
+	agtGpRectangle my_agtGpRectangle(point2,point3,point4,point5);
+	agtGpCircle my_agtGpCircle(point5, 125);
+
+	
+	glClear(GL_COLOR_BUFFER_BIT);	 
+	my_agtGpDot.draw();
+	my_agtGpLine.draw();
+	my_agtGpRectangle.draw();
+	my_agtGpCircle.draw();
 }
 
-int main(int argc, char **argv) {
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize(400 * 3, 300 * 3);
-    // glutInitWindowPosition(0, 0);
-    glutCreateWindow("Proof of Concept Program");
-    myinit();
-    glutDisplayFunc(display);
-    glutMainLoop();
+int main(int argc, char **argv) 
+{
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitWindowSize(400 * 3, 300 * 3);
+	// glutInitWindowPosition(0, 0);
+	glutCreateWindow("Proof of Concept Program");
+	myinit();
+	glutDisplayFunc(display);
+	glutMainLoop();
 }

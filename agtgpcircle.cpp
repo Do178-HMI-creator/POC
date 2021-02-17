@@ -1,15 +1,13 @@
 #include "agtgpcircle.h"
 #include <GL/glut.h>
 #include <cmath>
-agtGpCircle::agtGpCircle(int x1, int y1, int r) {
-    this->x1 = x1;
-    this->y1 = y1;
+agtGpCircle::agtGpCircle(agtTypPoint get_centerPoint, int r) {
+	this->centerPoint = get_centerPoint;
     this->r = r;
 }
 
-void agtGpCircle::update(int x1, int y1, int r) {
-    this->x1 = x1;
-    this->y1 = y1;
+void agtGpCircle::update(agtTypPoint get_centerPoint, int r) {
+	this->centerPoint = get_centerPoint;
     this->r = r;
 }
 
@@ -22,7 +20,7 @@ void agtGpCircle::draw() {
         float theta = 2.0f * 3.1415926f * float(ii) / float(360);//get the current angle
         float x = r * cosf(theta);//calculate the x component
         float y = r * sinf(theta);//calculate the y component
-        glVertex2f(x + this->x1, y + this->y1);//output vertex
+        glVertex2f(x + this->centerPoint.x, y + this->centerPoint.y);//output vertex
     }
     glEnd();
     glFlush();
