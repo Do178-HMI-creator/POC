@@ -27,11 +27,13 @@ std::vector<std::string> agtGpDot::split(const std::string s, char delimiter) {
 
 void agtGpDot::update(std::string message) {
 
-    if (split(message, '=')[1].compare("point.x")) {
+    if (split(message, '=')[0].compare("point.x")) {
         this->point.x = stoi(split(message, '=')[1]);
     } else {
         this->point.y = stoi(split(message, '=')[1]);
     }
+    glutPostRedisplay();
+
 }
 
 std::string agtGpDot::to_text() { return this->name; }

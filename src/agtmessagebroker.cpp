@@ -60,18 +60,16 @@ agtMessageBroker::agtMessageBroker() {
     fflush(stdout);
 
     while (1) {
-
         bytes_read = recvfrom(sock, recv_data, 1024, 0, (struct sockaddr *)&client_addr, (socklen_t *)&addr_len);
-
         recv_data[bytes_read] = '\0';
 
         printf("\n(%s , %d) RECEIVED : ", inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
         printf("%s\n", recv_data);
 
         std::string text = recv_data;
-        std::cout << split(text, '.')[0] << std::endl;
+        //std::cout << split(text, '.')[0] << std::endl;
         myTree.find(split(text, '.')[0])->update(split(text, '.')[1]);
-        display();
+
         fflush(stdout);
     }
 }
