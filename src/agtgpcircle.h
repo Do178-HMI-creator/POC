@@ -8,6 +8,7 @@ class agtGpCircle : public agtGraphicPrimitiveIfc {
   public:
     agtGpCircle(std::string name_c, agtTypPoint get_centerPoint, agtTypColor get_rgb, int r = 10);
     void update(agtTypPoint get_centerPoint, agtTypColor get_rgb, int r);
+    void update(std::string message);
     void draw();
     std::string to_text();
 

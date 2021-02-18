@@ -8,6 +8,7 @@ class agtGpLine : public agtGraphicPrimitiveIfc {
   public:
     agtGpLine(std::string name_c, agtTypPoint get_point1, agtTypPoint get_point2, agtTypColor get_rgb);
     void update(agtTypPoint get_point1, agtTypPoint get_point2, agtTypColor get_rgb);
+    void update(std::string message);
     void draw();
     std::string to_text();
 

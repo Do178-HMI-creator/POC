@@ -8,6 +8,7 @@ class agtGpRectangle : public agtGraphicPrimitiveIfc {
   public:
     agtGpRectangle(std::string name_c, agtTypPoint get_point1, agtTypPoint get_point2, agtTypPoint get_point3, agtTypPoint get_point4, agtTypColor get_rgb);
     void update(agtTypPoint get_point1, agtTypPoint get_point2, agtTypPoint get_point3, agtTypPoint get_point4, agtTypColor get_rgb);
+    void update(std::string message);
     void draw();
     std::string to_text();
 

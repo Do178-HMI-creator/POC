@@ -1,5 +1,8 @@
 #include "agtgpdot.h"
 #include <GL/glut.h>
+#include <iostream>
+#include <sstream>
+#include <vector>
 
 agtGpDot::agtGpDot(std::string name_c, agtTypPoint get_point, agtTypColor get_rgb) {
     this->point = get_point;
@@ -11,6 +14,27 @@ void agtGpDot::update(agtTypPoint get_point, agtTypColor get_rgb) {
     this->point = get_point;
     this->rgb = get_rgb;
 }
+
+std::vector<std::string> agtGpDot::split(const std::string s, char delimiter) {
+    std::vector<std::string> tokens;
+    std::string token;
+    std::istringstream tokenStream(s);
+    while (std::getline(tokenStream, token, delimiter)) {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
+
+void agtGpDot::update(std::string message) {
+
+    if (split(message, '=')[1].compare("point.x")) {
+        this->point.x = stoi(split(message, '=')[1]);
+    } else {
+        this->point.y = stoi(split(message, '=')[1]);
+    }
+
+}
+
 std::string agtGpDot::to_text() { return this->name; }
 void agtGpDot::draw() {
     glPointSize(9.0);

@@ -30,3 +30,4 @@ void agtGpRectangle::draw() {
     glFlush();
 }
 std::string agtGpRectangle::to_text() { return this->name; }
+void agtGpRectangle::update(std::string message) {}

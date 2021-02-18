@@ -20,9 +20,9 @@ def send(MESSAGE):
 if __name__ == '__main__':
     connect()
     while True:
-        send("my_agtGpDot.point.x=150")
-        send("my_agtGpDot.point.y=300")
-        sleep(2);
         send("my_agtGpDot.point.x=100")
-        send("my_agtGpDot.point.y=250")
+        send("my_agtGpDot.point.y=100")
+        sleep(2);
+        send("my_agtGpDot.point.x=300")
+        send("my_agtGpDot.point.y=300")
         sleep(2);

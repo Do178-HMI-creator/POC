@@ -22,3 +22,4 @@ void agtGpLine::draw() {
     glFlush();
 }
 std::string agtGpLine::to_text() { return this->name; }
+void agtGpLine::update(std::string message) {}

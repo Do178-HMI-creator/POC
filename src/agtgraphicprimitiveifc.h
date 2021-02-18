@@ -5,6 +5,7 @@ class agtGraphicPrimitiveIfc {
   public:
     virtual void draw() = 0;
     virtual std::string to_text() = 0;
+    virtual void update(std::string) = 0;
 
   protected:
     std::string name;

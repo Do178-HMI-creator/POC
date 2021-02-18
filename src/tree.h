@@ -485,45 +485,6 @@ template <class T, class tree_node_allocator = std::allocator<tree_node_<T>>> cl
     };
 };
 
-// template <class T, class tree_node_allocator>
-// class iterator_base_less {
-//	public:
-//		bool operator()(const typename tree<T, tree_node_allocator>::iterator_base& one,
-//						  const typename tree<T, tree_node_allocator>::iterator_base& two) const
-//			{
-//			txtout << "operatorclass<" << one.node < two.node << std::endl;
-//			return one.node < two.node;
-//			}
-//};
-
-// template <class T, class tree_node_allocator>
-// bool operator<(const typename tree<T, tree_node_allocator>::iterator& one,
-// 					const typename tree<T, tree_node_allocator>::iterator& two)
-// 	{
-// 	txtout << "operator< " << one.node < two.node << std::endl;
-// 	if(one.node < two.node) return true;
-// 	return false;
-// 	}
-//
-// template <class T, class tree_node_allocator>
-// bool operator==(const typename tree<T, tree_node_allocator>::iterator& one,
-// 					const typename tree<T, tree_node_allocator>::iterator& two)
-// 	{
-// 	txtout << "operator== " << one.node == two.node << std::endl;
-// 	if(one.node == two.node) return true;
-// 	return false;
-// 	}
-//
-// template <class T, class tree_node_allocator>
-// bool operator>(const typename tree<T, tree_node_allocator>::iterator_base& one,
-// 					const typename tree<T, tree_node_allocator>::iterator_base& two)
-// 	{
-// 	txtout << "operator> " << one.node < two.node << std::endl;
-// 	if(one.node > two.node) return true;
-// 	return false;
-// 	}
-
-// Tree
 
 template <class T, class tree_node_allocator> tree<T, tree_node_allocator>::tree() { head_initialise_(); }
 

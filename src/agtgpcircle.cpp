@@ -30,3 +30,4 @@ void agtGpCircle::draw() {
     glFlush();
 }
 std::string agtGpCircle::to_text() { return this->name; }
+void agtGpCircle::update(std::string message) {}

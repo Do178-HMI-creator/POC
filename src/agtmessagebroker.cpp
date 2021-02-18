@@ -1,14 +1,39 @@
 #include "agtmessagebroker.h"
+#include "agtobjecttree.h"
 #include <arpa/inet.h>
+#include <cstdlib>
 #include <errno.h>
 #include <netinet/in.h>
+#include <sstream>
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <string>
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <unistd.h>
+
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #define UDP_PORT 7777
+
+extern agtObjectTree myTree;
+extern void display();
+
+
+std::vector<std::string> agtMessageBroker::split(const std::string s, char delimiter)
+{
+    std::vector<std::string> tokens;
+    std::string token;
+    std::istringstream tokenStream(s);
+    std::getline(tokenStream, token, delimiter);
+    tokens.push_back(token);
+    std::getline(tokenStream, token, '\0');
+    tokens.push_back(token);
+    return tokens;
+}
+
 
 agtMessageBroker::agtMessageBroker() {
 
@@ -44,8 +69,12 @@ agtMessageBroker::agtMessageBroker() {
         recv_data[bytes_read] = '\0';
 
         printf("\n(%s , %d) RECEIVED : ", inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
+        printf("%s\n", recv_data);
 
-        printf("%s", recv_data);
+        std::string text = recv_data;
+        std::cout << split(text,'.')[0]<<std::endl;
+        myTree.find(split(text,'.')[0])->update(split(text,'.')[1]);
+        display();
         fflush(stdout);
     }
 }
