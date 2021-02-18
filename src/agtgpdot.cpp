@@ -33,7 +33,6 @@ void agtGpDot::update(std::string message) {
         this->point.y = stoi(split(message, '=')[1]);
     }
     glutPostRedisplay();
-
 }
 
 std::string agtGpDot::to_text() { return this->name; }

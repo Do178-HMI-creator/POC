@@ -1,8 +1,8 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
-#include <thread>
 #include <iostream>
+#include <thread>
 
 #include "agtTypColor.h"
 #include "agtTypPoint.h"
@@ -13,7 +13,6 @@
 #include "agtmessagebroker.h"
 #include "agtobjecttree.h"
 #include "tree.h"
-
 
 agtObjectTree myTree = agtObjectTree();
 agtTypPoint point1(150, 230);

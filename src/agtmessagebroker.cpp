@@ -67,7 +67,7 @@ agtMessageBroker::agtMessageBroker() {
         printf("%s\n", recv_data);
 
         std::string text = recv_data;
-        //std::cout << split(text, '.')[0] << std::endl;
+        // std::cout << split(text, '.')[0] << std::endl;
         myTree.find(split(text, '.')[0])->update(split(text, '.')[1]);
 
         fflush(stdout);
