@@ -1,8 +1,8 @@
 #ifndef AGTMESSAGEBROKER_H
 #define AGTMESSAGEBROKER_H
 
-#include <vector>
 #include <string>
+#include <vector>
 
 class agtMessageBroker {
   public:

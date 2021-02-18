@@ -21,9 +21,7 @@
 extern agtObjectTree myTree;
 extern void display();
 
-
-std::vector<std::string> agtMessageBroker::split(const std::string s, char delimiter)
-{
+std::vector<std::string> agtMessageBroker::split(const std::string s, char delimiter) {
     std::vector<std::string> tokens;
     std::string token;
     std::istringstream tokenStream(s);
@@ -33,7 +31,6 @@ std::vector<std::string> agtMessageBroker::split(const std::string s, char delim
     tokens.push_back(token);
     return tokens;
 }
-
 
 agtMessageBroker::agtMessageBroker() {
 
@@ -72,8 +69,8 @@ agtMessageBroker::agtMessageBroker() {
         printf("%s\n", recv_data);
 
         std::string text = recv_data;
-        std::cout << split(text,'.')[0]<<std::endl;
-        myTree.find(split(text,'.')[0])->update(split(text,'.')[1]);
+        std::cout << split(text, '.')[0] << std::endl;
+        myTree.find(split(text, '.')[0])->update(split(text, '.')[1]);
         display();
         fflush(stdout);
     }

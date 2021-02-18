@@ -485,7 +485,6 @@ template <class T, class tree_node_allocator = std::allocator<tree_node_<T>>> cl
     };
 };
 
-
 template <class T, class tree_node_allocator> tree<T, tree_node_allocator>::tree() { head_initialise_(); }
 
 template <class T, class tree_node_allocator> tree<T, tree_node_allocator>::tree(const T &x) {

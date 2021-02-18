@@ -12,11 +12,11 @@
 #include "agtgpline.h"
 #include "agtgprectangle.h"
 #include "agtmessagebroker.h"
-#include "tree.h"
 #include "agtobjecttree.h"
+#include "tree.h"
 #include <algorithm>
 #include <string>
-agtObjectTree myTree= agtObjectTree();
+agtObjectTree myTree = agtObjectTree();
 agtTypPoint point1(23, 245);
 agtTypPoint point2(145, 245);
 agtTypPoint point3(195, 245);
@@ -61,8 +61,6 @@ void myinit() {
     myTree.insert("root", &my_agtGpRectangle);
     myTree.insert("root", &my_agtGpLine);
     myTree.insert("root", &my_agtGpDot);
-
-
 }
 
 void MessageBroker() { agtMessageBroker myBroker; }
