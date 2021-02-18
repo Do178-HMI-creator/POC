@@ -1,18 +1,19 @@
 #ifndef AGTGPDOT_H
 #define AGTGPDOT_H
-#include "agtgraphicprimitiveifc.h"
-#include "agtTypPoint.h"
 #include "agtTypColor.h"
+#include "agtTypPoint.h"
+#include "agtgraphicprimitiveifc.h"
 
 class agtGpDot : public agtGraphicPrimitiveIfc {
   public:
-    agtGpDot(agtTypPoint get_point, agtTypColor get_rgb);
+    agtGpDot(std::string name_c, agtTypPoint get_point, agtTypColor get_rgb);
     void update(agtTypPoint get_point, agtTypColor get_rgb);
     void draw();
+    std::string to_text();
 
   private:
-	  agtTypPoint point;
-	  agtTypColor rgb;
+    agtTypPoint point;
+    agtTypColor rgb;
 };
 
 #endif // AGTGPDOT_H

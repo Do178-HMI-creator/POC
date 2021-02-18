@@ -1,22 +1,22 @@
 #ifndef AGTGPRECTANGLE_H
 #define AGTGPRECTANGLE_H
-#include "agtgraphicprimitiveifc.h"
-#include "agtTypPoint.h"
 #include "agtTypColor.h"
+#include "agtTypPoint.h"
+#include "agtgraphicprimitiveifc.h"
 
 class agtGpRectangle : public agtGraphicPrimitiveIfc {
   public:
-    agtGpRectangle(agtTypPoint get_point1, agtTypPoint get_point2, agtTypPoint get_point3, agtTypPoint get_point4, agtTypColor get_rgb);
+    agtGpRectangle(std::string name_c, agtTypPoint get_point1, agtTypPoint get_point2, agtTypPoint get_point3, agtTypPoint get_point4, agtTypColor get_rgb);
     void update(agtTypPoint get_point1, agtTypPoint get_point2, agtTypPoint get_point3, agtTypPoint get_point4, agtTypColor get_rgb);
     void draw();
+    std::string to_text();
 
   private:
-	  agtTypPoint point1;
-	  agtTypPoint point2;
-	  agtTypPoint point3;
-	  agtTypPoint point4;
-	  agtTypColor rgb;
-
+    agtTypPoint point1;
+    agtTypPoint point2;
+    agtTypPoint point3;
+    agtTypPoint point4;
+    agtTypColor rgb;
 };
 
 #endif // AGTGPRECTANGLE_H

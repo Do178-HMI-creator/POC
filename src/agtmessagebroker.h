@@ -1,10 +1,8 @@
 #ifndef AGTMESSAGEBROKER_H
 #define AGTMESSAGEBROKER_H
 
-
-class agtMessageBroker
-{
-public:
+class agtMessageBroker {
+  public:
     agtMessageBroker();
 };
 

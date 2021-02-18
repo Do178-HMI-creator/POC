@@ -44,6 +44,7 @@ agtMessageBroker::agtMessageBroker() {
         recv_data[bytes_read] = '\0';
 
         printf("\n(%s , %d) RECEIVED : ", inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
+
         printf("%s", recv_data);
         fflush(stdout);
     }

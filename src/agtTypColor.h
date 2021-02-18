@@ -2,19 +2,13 @@
 #define AGTTYPCOLOR_H
 
 class agtTypColor {
-public:
+  public:
+    agtTypColor(float get_r = 0.0, float get_g = 0.0, float get_b = 0.0);
 
-	agtTypColor(float get_r = 0.0, float get_g = 0.0, float get_b = 0.0);
-
-	float r_get();
-	float g_get();
-	float b_get();
-
-private:
-
-	float r, g, b;
-	
+    float r_get();
+    float g_get();
+    float b_get();
+    float r, g, b;
 };
 
 #endif // !AGTTYPCOLOR_H
-
