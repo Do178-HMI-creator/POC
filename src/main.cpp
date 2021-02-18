@@ -52,8 +52,6 @@ void myinit() {
     gluOrtho2D(0.0, 499.0, 0.0, 499.0);
 }
 
-
-
 void MessageBroker() { agtMessageBroker myBroker; }
 
 void notmain() {
