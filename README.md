@@ -1,10 +1,13 @@
 # Proof of Concept
 A simple POC program for D0-178 certifiable HMI creator.
 
+- Dot 
+- Line
+- Circle 
+- Rectangle
 
-- Line Class
-- Rectangle Class
-- Rotation Group
+- Simple Group
+
 - Message Broker
 
 
