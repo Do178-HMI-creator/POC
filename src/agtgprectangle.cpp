@@ -19,13 +19,13 @@ void agtGpRectangle::update(agtTypPoint get_point1, agtTypPoint get_point2, agtT
 
 void agtGpRectangle::draw() {
 
-    glColor3f(this->rgb.r_get(), this->rgb.g_get(), this->rgb.b_get());
+    glColor3f(this->rgb.r, this->rgb.g, this->rgb.b);
     glLineWidth(2);
     glBegin(GL_LINE_LOOP);
-    glVertex2f(this->point1.get_x(), this->point1.get_y());
-    glVertex2f(this->point2.get_x(), this->point2.get_y());
-    glVertex2f(this->point3.get_x(), this->point3.get_y());
-    glVertex2f(this->point4.get_x(), this->point4.get_y());
+    glVertex2f(this->point1.x, this->point1.y);
+    glVertex2f(this->point2.x, this->point2.y);
+    glVertex2f(this->point3.x, this->point3.y);
+    glVertex2f(this->point4.x, this->point4.y);
     glEnd();
     glFlush();
 }

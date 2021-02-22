@@ -16,7 +16,7 @@ void agtGpCircle::update(agtTypPoint get_centerPoint, agtTypColor get_rgb, int r
 }
 
 void agtGpCircle::draw() {
-    glColor3f(this->rgb.r_get(), this->rgb.g_get(), this->rgb.b_get());
+    glColor3f(this->rgb.r, this->rgb.g, this->rgb.b);
     glLineWidth(2);
     glBegin(GL_LINE_LOOP);
 
@@ -24,7 +24,7 @@ void agtGpCircle::draw() {
         float theta = 2.0f * 3.1415926f * float(ii) / float(360);                 // get the current angle
         float x = r * cosf(theta);                                                // calculate the x component
         float y = r * sinf(theta);                                                // calculate the y component
-        glVertex2f(x + this->centerPoint.get_x(), y + this->centerPoint.get_y()); // output vertex
+        glVertex2f(x + this->centerPoint.x, y + this->centerPoint.y); // output vertex
     }
     glEnd();
     glFlush();

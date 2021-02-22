@@ -1,13 +1,7 @@
 #include "agtTypColor.h"
 
-agtTypColor::agtTypColor(float get_r, float get_g, float get_b) {
-    this->r = get_r;
-    this->g = get_g;
-    this->b = get_b;
+agtTypColor::agtTypColor(float r_in, float g_in, float b_in) {
+    this->r = r_in;
+    this->g = g_in;
+    this->b = b_in;
 }
-
-float agtTypColor::r_get() { return this->r; }
-
-float agtTypColor::g_get() { return this->g; }
-
-float agtTypColor::b_get() { return this->b; }

@@ -3,10 +3,7 @@
 
 class agtTypPoint {
   public:
-    agtTypPoint(float x_c = 0.0, float y_c = 0.0);
-
-    float get_x();
-    float get_y();
+    agtTypPoint(float x_in = 0.0, float y_in = 0.0);
 
     // Add
     agtTypPoint operator+=(agtTypPoint pnt);
@@ -20,7 +17,6 @@ class agtTypPoint {
     agtTypPoint operator-=(float num);
     agtTypPoint operator-(float num);
 
-    // private:
     float x;
     float y;
 };

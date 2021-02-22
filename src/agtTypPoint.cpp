@@ -1,14 +1,10 @@
 #include "agtTypPoint.h"
 #include <GL/glut.h>
 
-agtTypPoint::agtTypPoint(float x_c, float y_c) {
-    this->x = x_c;
-    this->y = y_c;
+agtTypPoint::agtTypPoint(float x_in, float y_in) {
+    this->x = x_in;
+    this->y = y_in;
 }
-
-float agtTypPoint::get_x() { return this->x; }
-
-float agtTypPoint::get_y() { return this->y; }
 
 agtTypPoint agtTypPoint::operator+=(agtTypPoint pnt) {
     (*this).x += pnt.x;

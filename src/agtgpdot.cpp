@@ -39,9 +39,9 @@ std::string agtGpDot::to_text() { return this->name; }
 void agtGpDot::draw() {
     glPointSize(9.0);
     glLineWidth(3.0);
-    glColor3f(this->rgb.r_get(), this->rgb.g_get(), this->rgb.b_get());
+    glColor3f(this->rgb.r, this->rgb.g, this->rgb.b);
     glBegin(GL_POINTS);
-    glVertex2f(this->point.get_x(), this->point.get_y());
+    glVertex2f(this->point.x, this->point.y);
     glEnd();
     glFlush();
 }

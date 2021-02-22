@@ -3,11 +3,8 @@
 
 class agtTypColor {
   public:
-    agtTypColor(float get_r = 0.0, float get_g = 0.0, float get_b = 0.0);
+    agtTypColor(float r_in = 0.0, float g_in = 0.0, float b_in = 0.0);
 
-    float r_get();
-    float g_get();
-    float b_get();
     float r, g, b;
 };
 
