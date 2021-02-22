@@ -1,4 +1,6 @@
+
 language: cpp
+dist: bionic
 compiler:
   - clang
   - gcc
