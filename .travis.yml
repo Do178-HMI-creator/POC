@@ -12,7 +12,7 @@ before_install:
   - sudo apt-get install libglm-dev
   - sudo apt-get install freeglut3-dev
   
-  script:
-    - cd src/
-    - cmake .
-    - cmake --build . 
+script:
+  - cd src/
+  - cmake .
+  - cmake --build . 
