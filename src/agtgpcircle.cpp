@@ -21,9 +21,9 @@ void agtGpCircle::draw() {
     glBegin(GL_LINE_LOOP);
 
     for (int ii = 0; ii < 360; ii++) {
-        float theta = 2.0f * 3.1415926f * float(ii) / float(360);                 // get the current angle
-        float x = r * cosf(theta);                                                // calculate the x component
-        float y = r * sinf(theta);                                                // calculate the y component
+        float theta = 2.0f * 3.1415926f * float(ii) / float(360);     // get the current angle
+        float x = r * cosf(theta);                                    // calculate the x component
+        float y = r * sinf(theta);                                    // calculate the y component
         glVertex2f(x + this->centerPoint.x, y + this->centerPoint.y); // output vertex
     }
     glEnd();
