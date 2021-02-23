@@ -21,7 +21,8 @@
 extern agtObjectTree myTree;
 extern void display();
 
-std::vector<std::string> agtMessageBroker::split(const std::string s, char delimiter) {
+std::vector<std::string> agtMessageBroker::split(const std::string s, char delimiter)
+{
     std::vector<std::string> tokens;
     std::string token;
     std::istringstream tokenStream(s);
@@ -32,14 +33,16 @@ std::vector<std::string> agtMessageBroker::split(const std::string s, char delim
     return tokens;
 }
 
-agtMessageBroker::agtMessageBroker() {
+agtMessageBroker::agtMessageBroker()
+{
 
     int sock;
     int addr_len, bytes_read;
     char recv_data[1024];
     struct sockaddr_in server_addr, client_addr;
 
-    if ((sock = socket(AF_INET, SOCK_DGRAM, 0)) == -1) {
+    if ((sock = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
+    {
         perror("Socket");
         exit(1);
     }
@@ -49,7 +52,8 @@ agtMessageBroker::agtMessageBroker() {
     server_addr.sin_addr.s_addr = INADDR_ANY;
     memset(server_addr.sin_zero, 0, 8);
 
-    if (bind(sock, (struct sockaddr *)&server_addr, sizeof(struct sockaddr)) == -1) {
+    if (bind(sock, (struct sockaddr *)&server_addr, sizeof(struct sockaddr)) == -1)
+    {
         perror("Bind");
         exit(1);
     }
@@ -59,7 +63,8 @@ agtMessageBroker::agtMessageBroker() {
     printf("\nUDPServer Waiting for client on port ");
     fflush(stdout);
 
-    while (1) {
+    while (1)
+    {
         bytes_read = recvfrom(sock, recv_data, 1024, 0, (struct sockaddr *)&client_addr, (socklen_t *)&addr_len);
         recv_data[bytes_read] = '\0';
 

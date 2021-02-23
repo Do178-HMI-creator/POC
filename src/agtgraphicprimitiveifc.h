@@ -1,7 +1,8 @@
 #ifndef AGTGRAPHICPRIMITIVEIFC_H
 #define AGTGRAPHICPRIMITIVEIFC_H
 #include <string>
-class agtGraphicPrimitiveIfc {
+class agtGraphicPrimitiveIfc
+{
   public:
     virtual void draw() = 0;
     virtual std::string getName() = 0;

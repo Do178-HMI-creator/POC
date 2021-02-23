@@ -4,7 +4,8 @@
 #include "agtTypPoint.h"
 #include "agtgraphicprimitiveifc.h"
 
-class agtGpRectangle : public agtGraphicPrimitiveIfc {
+class agtGpRectangle : public agtGraphicPrimitiveIfc
+{
   public:
     agtGpRectangle(std::string name_c, agtTypPoint get_point1, agtTypPoint get_point2, agtTypPoint get_point3, agtTypPoint get_point4, agtTypColor get_rgb);
     void update(agtTypPoint get_point1, agtTypPoint get_point2, agtTypPoint get_point3, agtTypPoint get_point4, agtTypColor get_rgb);

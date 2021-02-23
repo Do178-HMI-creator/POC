@@ -4,7 +4,8 @@
 #include "tree.h"
 #include <map>
 
-class agtObjectTree {
+class agtObjectTree
+{
   public:
     agtObjectTree();
 

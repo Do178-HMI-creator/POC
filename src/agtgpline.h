@@ -4,7 +4,8 @@
 #include "agtTypPoint.h"
 #include "agtgraphicprimitiveifc.h"
 
-class agtGpLine : public agtGraphicPrimitiveIfc {
+class agtGpLine : public agtGraphicPrimitiveIfc
+{
   public:
     agtGpLine(std::string name_c, agtTypPoint get_point1, agtTypPoint get_point2, agtTypColor get_rgb);
     void update(agtTypPoint get_point1, agtTypPoint get_point2, agtTypColor get_rgb);
