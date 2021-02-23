@@ -4,7 +4,8 @@
 #include <string>
 #include <vector>
 
-class agtMessageBroker {
+class agtMessageBroker
+{
   public:
     agtMessageBroker();
     std::vector<std::string> split(const std::__cxx11::basic_string<char> s, char delimiter);

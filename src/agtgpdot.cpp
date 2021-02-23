@@ -35,7 +35,8 @@ void agtGpDot::update(std::string message) {
     glutPostRedisplay();
 }
 
-std::string agtGpDot::to_text() { return this->name; }
+std::string agtGpDot::getName() { return this->name; }
+
 void agtGpDot::draw() {
     glPointSize(9.0);
     glLineWidth(3.0);

@@ -5,13 +5,14 @@
 #include "agtgraphicprimitiveifc.h"
 #include <vector>
 
-class agtGpDot : public agtGraphicPrimitiveIfc {
+class agtGpDot : public agtGraphicPrimitiveIfc
+{
   public:
     agtGpDot(std::string name_c, agtTypPoint get_point, agtTypColor get_rgb);
     void update(agtTypPoint get_point, agtTypColor get_rgb);
-    void update(std::string message);
-    void draw();
-    std::string to_text();
+    void update(std::string message) override;
+    void draw() override;
+    std::string getName() override;
 
   private:
     agtTypPoint point;

@@ -45,7 +45,8 @@ agtGpDot my_agtGpDot5("my_agtGpDot5", point5, color5);
 agtGpDot my_agtGpDot6("my_agtGpDot6", point6, color6);
 agtGpDot my_agtGpDot7("my_agtGpDot7", point7, color8);
 
-void myinit() {
+void myinit()
+{
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(0.0, 499.0, 0.0, 499.0);
@@ -64,17 +65,22 @@ void myinit() {
 
 void MessageBroker() { agtMessageBroker myBroker; }
 
-void display() {
+void display()
+{
     glClear(GL_COLOR_BUFFER_BIT);
+
     tree<agtGraphicPrimitiveIfc *>::iterator begin = myTree.obj_tree.begin();
     tree<agtGraphicPrimitiveIfc *>::iterator end = myTree.obj_tree.end();
-    while (begin != end) {
-        std::cout << (*begin)->to_text() << std::endl;
+
+    while (begin != end)
+    {
         (*begin)->draw();
         ++begin;
     }
 }
-int main(int argc, char **argv) {
+
+int main(int argc, char **argv)
+{
 
     std::thread Broker(MessageBroker);
     Broker.detach();
